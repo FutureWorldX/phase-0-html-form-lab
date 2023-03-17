@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration and Refferal Form</title>
+  </head>
+  <body>
+  <!-- Write your HTML here -->
+
+  <!--Main page-->
+    <h2>Registration and Refferal Form</h2>
+    <h3>Accessible Registration Form in HTML 5</h3>
+
+    <form>
+        <!--Member Information-->
+        <!-- Placeholder shows the greyed out text (using Value will autofill the textbox) -->
+    <label for="member-name">Name</label> <br>
+        <input type="text" id="member-name" name="member-name" placeholder="Please Enter the Name" required> <br>
+    <label for="member-email">Email</label> <br>
+        <input type="email" id="member-email" name="member-email" placeholder="Please Enter the Email" required
+            pattern="[^ @]*@[^ @]*.[^ .]"
+            title="Must contain an email address in the format of: username@example.com"> <br>
+    <label for="member-password">Password</label> <br>
+        <input type="password" id="member-password" name="member-password" placeholder="Please Enter the Password" required 
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"> <br>
+    <br>
+    
+        <!--Refferer Information-->
+    <fieldset>
+        <legend>Referrer:</legend>
+        <!-- referral-select is the required value for sending the radio input -->
+        <input type="radio" id="referral-tv" name="referral-select" value="TV">
+            <label for="referral-tv"> TV </label> <br>
+        <input type="radio" id="referral-internet" name="referral-select" value="Internet">
+            <label for="referral-internet"> Internet </label> <br>
+        <input type="radio" id="referral-none" name="referral-select" value="None" checked>
+            <label for="referral-none"> None </label> <br>
+    </fieldset>
+    <br>
+    
+        <!--Completing Registration-->
+    <input type="checkbox" id="terms-of-service" Value="true" required> 
+        <label for="terms-of-service"> I accept the Terms of Service </label> <br> 
+    <input type="submit" value="Register"> 
+    <br>
+        
+    </form> 
+
+</body>
+</html>
